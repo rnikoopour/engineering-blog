@@ -1,0 +1,15 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.content {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.footer {
+  border-top: 1px solid var(--ifm-toc-border-color);
+  padding: var(--ifm-menu-link-padding-vertical) var(--ifm-menu-link-padding-horizontal);
+}

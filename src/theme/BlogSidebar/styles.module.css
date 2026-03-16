@@ -1,0 +1,229 @@
+/* Carried over from Docusaurus BlogSidebar/Desktop */
+.sidebar {
+  max-height: calc(100vh - (var(--ifm-navbar-height) + 2rem));
+  overflow-y: auto;
+  position: sticky;
+  top: calc(var(--ifm-navbar-height) + 2rem);
+}
+
+.sidebarItemTitle {
+  font-size: var(--ifm-h3-font-size);
+  font-weight: var(--ifm-font-weight-bold);
+  position: sticky;
+  top: calc(2rem + 8px); /* below the tabs */
+  background: var(--ifm-background-color);
+  z-index: 1;
+  padding-bottom: 4px;
+}
+
+.sidebarItemList {
+  font-size: 0.9rem;
+}
+
+.sidebarItem {
+  margin-top: 0.7rem;
+}
+
+.sidebarItemLink {
+  color: var(--ifm-font-color-base);
+  display: block;
+}
+
+.postDate {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--ifm-color-emphasis-500);
+  margin-top: 2px;
+}
+
+.sidebarItemLinkActive .postDate,
+.sidebarItemLink:hover .postDate {
+  color: inherit;
+}
+
+.sidebarItemLink:hover {
+  text-decoration: none;
+}
+
+.sidebarItemLinkActive {
+  color: var(--ifm-color-primary) !important;
+}
+
+@media (max-width: 996px) {
+  .sidebar {
+    display: none;
+  }
+}
+
+.yearGroupHeading {
+  margin-top: 1.6rem;
+  margin-bottom: 0.4rem;
+}
+
+.yearToggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: var(--ifm-font-weight-bold);
+  color: var(--ifm-font-color-base);
+  padding: 6px 0;
+  text-align: left;
+}
+
+.yearToggle:hover {
+  color: var(--ifm-color-primary);
+}
+
+.yearToggleIcon {
+  font-size: 0.75rem;
+  width: 12px;
+}
+
+.yearGroup {
+  padding-left: 12px;
+}
+
+/* Collapse toggle — sticks out as a tab from the top-right of the aside */
+.collapseToggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateX(100%);
+  background: var(--ifm-background-surface-color);
+  border: 1px solid var(--ifm-toc-border-color);
+  border-left: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  font-size: 0.7rem;
+  color: var(--ifm-color-emphasis-600);
+  padding: 8px 4px;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.collapseToggle:hover {
+  color: var(--ifm-color-primary);
+}
+
+.collapseToggleCollapsed {
+  position: fixed;
+  top: calc(var(--ifm-navbar-height) + 2rem);
+  left: 0;
+  right: auto;
+  transform: none;
+  border-left: 1px solid var(--ifm-toc-border-color);
+  border-radius: 0 4px 4px 0;
+}
+
+.asideRelative {
+  position: relative;
+}
+
+.collapseToggleAnchor {
+  position: sticky;
+  top: calc(var(--ifm-navbar-height) + 2rem);
+  height: 0;
+}
+
+.asideCollapsed {
+  min-width: 0 !important;
+  width: 0 !important;
+  flex: 0 0 0px !important;
+  padding: 0 !important;
+  margin-right: var(--ifm-spacing-horizontal) !important;
+}
+
+/* Sticky header: toggle + title */
+.stickyHeader {
+  position: sticky;
+  top: 0;
+  background: var(--ifm-background-color);
+  z-index: 1;
+  padding-bottom: 2px;
+}
+
+/* Posts / Tags toggle */
+.tabs {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 12px;
+  padding-right: 12px;
+}
+
+.tab {
+  flex: 1;
+  text-align: center;
+  padding: 5px 10px;
+  border-radius: var(--ifm-global-radius);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--ifm-color-emphasis-700);
+  text-decoration: none !important;
+  transition: background 0.15s, color 0.15s;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.tab:hover {
+  background: var(--ifm-hover-overlay);
+  color: var(--ifm-color-primary);
+}
+
+.tabActive {
+  background: var(--ifm-color-primary);
+  color: #fff !important;
+}
+
+.tabActive:hover {
+  background: var(--ifm-color-primary-dark);
+  color: #fff;
+}
+
+/* Tag list */
+.tagList {
+  margin: 0;
+  padding: 0;
+  font-size: 0.9rem;
+}
+
+.tagItem {
+  margin-top: 0.5rem;
+}
+
+.tagLink {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3px 4px;
+  border-radius: var(--ifm-global-radius);
+  color: var(--ifm-font-color-base);
+  text-decoration: none !important;
+  transition: color 0.15s;
+}
+
+.tagLink:hover {
+  color: var(--ifm-color-primary);
+  text-decoration: none;
+}
+
+.tagLinkActive {
+  color: var(--ifm-color-primary) !important;
+  font-weight: 600;
+}
+
+.tagCount {
+  font-size: 0.75rem;
+  color: var(--ifm-color-emphasis-500);
+  background: var(--ifm-color-emphasis-200);
+  padding: 1px 6px;
+  border-radius: 999px;
+  flex-shrink: 0;
+}

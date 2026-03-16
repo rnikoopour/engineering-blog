@@ -3,6 +3,8 @@ const { themes: prismThemes } = require('prism-react-renderer');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
+  plugins: ['./plugins/blog-tags-plugin'],
+
   title: "Reza Nikoopour's Engineering Blog",
   tagline: 'I engineer things and share them',
   favicon: 'img/favicon.ico',

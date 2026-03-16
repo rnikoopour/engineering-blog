@@ -1,0 +1,50 @@
+.menuButton {
+  /* Strip browser button defaults that conflict with menu__link */
+  appearance: none;
+  -webkit-appearance: none;
+  background: none;
+  border: none;
+  /* Sizing */
+  width: 100%;
+  /* Typography — let menu__link own color/line-height/font-size */
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.sectionTitle {
+  font-size: inherit;
+  font-weight: var(--ifm-font-weight-bold);
+  padding: var(--ifm-menu-link-padding-vertical) var(--ifm-menu-link-padding-horizontal);
+  margin-bottom: 4px;
+}
+
+.tabFontOverride {
+  font-size: inherit;
+}
+
+.postDate {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--ifm-color-emphasis-500);
+  margin-top: 2px;
+}
+
+:global(.menu__link--active) .postDate,
+:global(.menu__link:hover) .postDate {
+  color: inherit;
+}
+
+/* menu__link is display:flex — stack children vertically */
+.linkColumn {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.tagCount {
+  font-size: 0.75rem;
+  color: var(--ifm-color-emphasis-500);
+  margin-left: 6px;
+}
