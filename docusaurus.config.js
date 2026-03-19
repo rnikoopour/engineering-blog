@@ -69,7 +69,7 @@ const config = {
       prism: {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
-        additionalLanguages: ['erlang', 'haskell'],
+        additionalLanguages: ['erlang', 'haskell', 'lisp'],
       },
     }),
 };
