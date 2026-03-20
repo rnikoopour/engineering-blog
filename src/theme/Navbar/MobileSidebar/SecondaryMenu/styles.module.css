@@ -10,6 +10,20 @@
 }
 
 .footer {
+  display: flex;
+  align-items: center;
+  gap: var(--ifm-menu-link-padding-horizontal);
   border-top: 1px solid var(--ifm-toc-border-color);
-  padding: var(--ifm-menu-link-padding-vertical) var(--ifm-menu-link-padding-horizontal);
+  padding: var(--ifm-menu-link-padding-vertical)
+    var(--ifm-menu-link-padding-horizontal);
+}
+
+.feedIcon {
+  display: flex;
+  align-items: center;
+  color: var(--ifm-menu-color);
+}
+
+.feedIcon:hover {
+  color: var(--ifm-menu-color-active);
 }
