@@ -2,6 +2,15 @@
  * Any CSS included here will be global.
  */
 
+.navbar__item a svg {
+  display: block;
+  color: var(--ifm-navbar-link-color);
+}
+
+.navbar__item a:hover svg {
+  color: var(--ifm-navbar-link-hover-color);
+}
+
 /* Infima default theme variables */
 :root {
   --ifm-color-primary: #2e8555;
