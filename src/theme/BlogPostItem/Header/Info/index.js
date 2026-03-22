@@ -13,7 +13,7 @@ export default function BlogPostItemHeaderInfoWrapper(props) {
       <BlogPostItemHeaderInfo {...props} />
       {tags.length > 0 && (
         <div className={styles.tags}>
-          {tags.map((tag) => (
+          {[...tags].sort((a, b) => a.label.localeCompare(b.label)).map((tag) => (
             <Link
               key={tag.permalink}
               to={tag.permalink}
